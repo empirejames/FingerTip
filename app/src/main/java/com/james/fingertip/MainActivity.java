@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("8853EA0F6D13F5C9888906CE4B67300D").build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         tv = (TextView) findViewById(R.id.taigi_text);
