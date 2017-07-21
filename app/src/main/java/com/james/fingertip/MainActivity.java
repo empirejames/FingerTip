@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     SensorManager mSensorManager;
     ImageView imgTaigi;
     String TAG = MainActivity.class.getSimpleName();
-    int stopturnnum = (int) (Math.random() * 3600);
     Animation am;
     int speed_x;
     int speed_y;
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private InterstitialAd mInterstitialAd;
     int speedControl = 10;
     private int[] resId01 = {R.drawable.taigi1, R.drawable.taigi2, R.drawable.taigi3, R.drawable.taigi4, R.drawable.taigi5, R.drawable.taigi6, R.drawable.taigi7, R.drawable.taigi8, R.drawable.taigi9, R.drawable.taigi10};
-    private String[] listString = {"「陰」則起著完成、接受、 被動和服從的作用", "「陽」是在萬物生成中起著創始、施與、主動和領導作用", "仔細觀查是否能體悟出一些道理", "靜下心 聽其聲 察其色", " 動如猛虎，靜如帝鳄", "太極生兩儀 兩儀生四象 四象生八卦 八卦演萬物", "宇宙的終極我們稱之為無極", "兩種力量在不斷作用、循環往復，於是他稱之為「陰陽」"};
+    private String[] listString ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +56,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+        inittaigiList();
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("F618803C89E1614E3394A55D5E7A756B").build();
         mAdView.loadAd(adRequest);
-
         tv = (TextView) findViewById(R.id.taigi_text);
         tvContant = (TextView) findViewById(R.id.taigi_conten);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -68,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         imgTaigi = (ImageView) findViewById(R.id.img_taigi);
         String drawableName = "taigi" + randomPic;
         int resID = getResources().getIdentifier(drawableName, "drawable", getPackageName());
+        int resshowID = getResources().getIdentifier(drawableName, "mipmap", getPackageName());
         imgTaigi.setImageResource(resID);
         am = new RotateAnimation(0, 360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
         am.setAnimationListener(MainActivity.this);
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         getScrrenSize();
         myimageviewsize(imgTaigi, intScreenWidth, intScreenHeight);
         show = (MyView) findViewById(R.id.show);
+        show.setViewImg(resshowID);
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         startRotation(value, false);
         imgTaigi.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +91,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         handler.postDelayed(updateTimer, 1000);
         handler.postDelayed(updateString, 1000);
     }
+    public void inittaigiList(){
+        listString = getResources().getStringArray(R.array.taigi01);
+    }
+
+
 
     public void startRotation(int stop, boolean triggle) {
         // Log.e(TAG,"" + stop);

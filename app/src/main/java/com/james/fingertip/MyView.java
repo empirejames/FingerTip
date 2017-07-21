@@ -1,6 +1,7 @@
 package com.james.fingertip;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -20,10 +21,14 @@ public class MyView extends View {
     Animation am;
     public MyView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        back = BitmapFactory.decodeResource(getResources(), R.mipmap.taigi);
-        bubble = BitmapFactory.decodeResource(getResources(), R.drawable.bubble);
-
+        //setViewImg(R.mipmap.taigi);
     }
+
+    public void setViewImg(int img_id){
+        back = BitmapFactory.decodeResource(getResources(), img_id);
+        bubble = BitmapFactory.decodeResource(getResources(), R.drawable.bubble);
+    }
+
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);

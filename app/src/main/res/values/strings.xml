@@ -1,4 +1,35 @@
 <resources>
     <string name="app_name">指尖太極</string>
     <string name="banner_ad_unit_id">ca-app-pub-1659435325076970/7530371447</string>
+
+    <string-array name="taigi01">
+        <item>「陰」則起著完成、接受、 被動和服從的作用</item>
+        <item>「陽」是在萬物生成中起著創始、施與、主動和領導作用</item>
+        <item>仔細觀查是否能體悟出一些道理</item>
+        <item>靜下心 聽其聲 察其色</item>
+        <item>動如猛虎，靜如帝鳄</item>
+        <item>太極生兩儀 兩儀生四象 四象生八卦 八卦演萬物</item>
+        <item>宇宙的終極我們稱之為無極</item>
+        <item>兩種力量在不斷作用、循環往復，於是他稱之為「陰陽」</item>
+        <item>是故易有太極，是生兩儀</item>
+        <item>「兩儀生四象」者，謂金 木 水 火</item>
+        <item>「四象生」者，謂坎、離、震、兌、乾、坤、艮、巽</item>
+        <item>《易經》是中國最古老的文獻之一</item>
+        <item>兩儀即陰陽，陰陽現象起於動機</item>
+        <item>不動則靜，靜則無形，無象為無極，故動靜之機便是太極</item>
+        <item>周易《繫辭上》云：「一陰一陽之謂道」</item>
+        <item>太極拳 : 虛實宜分清楚，一處有一處虛實，處處總有此一虛實</item>
+        <item>太極拳又名十三勢長拳，長拳者如長江大海，滔滔不絕也</item>
+        <item>宇宙就是混沌，圖案為「○」，謂無極</item>
+        <item>宇宙太極論 : 陽上加陽，叫「太陽」</item>
+        <item>宇宙太極論 : 陽上加陰，叫「少陰」</item>
+        <item>宇宙太極論 : 陰上加陰，叫「太陰」</item>
+        <item>宇宙太極論 : 陰上加陽，叫「少陽」</item>
+        <item>四象即方位:青龍即少陽 朱雀即太陽 白虎即少陰 玄武即太陰</item>
+        <item>「震」是太陽升起的地方，代表東方。</item>
+        <item>八卦: 「離」是太陽正旺的地方，代表南方</item>
+        <item>八卦: 「兌」是太陽西下的地方，代表西方</item>
+        <item>八卦: 「坎」是太陽消失的地方，代表北方</item>
+        <item>八卦生成: 乾→坤→震→巽→坎→離→艮→兌</item>
+    </string-array>
 </resources>
